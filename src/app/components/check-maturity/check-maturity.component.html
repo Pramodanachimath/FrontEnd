@@ -1,0 +1,23 @@
+<div >
+    <h1 >Check Maturity</h1>
+        <table>
+            <tr>
+                <td><label for="year">Enter Number of Years:</label></td>
+                <td><input type="text" name="year" #year><br></td>
+            </tr>
+
+            <tr>
+                <td><label for="amount">Enter Amount:</label></td>
+                <td><input type="text" name="amount" #amount><br></td>
+            </tr>
+        
+            <tr>
+                <td>
+                    <button (click)="calculateMaturity(+year.value,+amount.value)">Calculate</button>
+                </td>
+            </tr>
+
+
+        </table>
+</div>
+

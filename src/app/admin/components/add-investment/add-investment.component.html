@@ -1,0 +1,55 @@
+
+  <form #addForm="ngForm" (ngSubmit)="onSubmit(addForm)" novalidate>
+    <table>
+        <tr>
+            <td>
+                <label for="planName">PlanName</label>
+            </td>
+            <td><input type="text" name="planName" [(ngModel)]="pensionplan.planName"></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="age">Age</label>
+            </td>
+            <td><input type="age" name="age" #age="ngModel" [(ngModel)]="pensionplan.age"></td>
+        </tr>
+        <tr>
+        <td>
+            <label for="coverage">Coverage</label>
+        </td>
+        <td>
+            <select name="coverage" [(ngModel)]="pensionplan.coverage">
+                <option value="SINGLE">SINGLE</option>
+                <option value="SHARING">SHARING</option>
+                <option value="PARENTS">PARENTS</option>
+                <option value="SINGLEPLUSHEALTH">SINGLEPLUSHEALTH</option>
+            </select>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <label for="term">Term</label>
+        </td>
+        <td><input type="text" name="term" #term="ngModel" [(ngModel)]="pensionplan.term"></td>
+    </tr>
+    <tr>
+        <td>
+            <label for="premium">Premium</label>
+        </td>
+        <td><input type="text" name="premium" #premium="ngModel" [(ngModel)]="pensionplan.premium"></td>
+    </tr>
+    
+
+    <tr>
+        <td>
+            <label for="amount">Amount</label>
+        </td>
+        <td><input type="text" name="amount" #amount="ngModel" [(ngModel)]="pensionplan.amount"></td>
+    </tr>
+    
+    <tr>
+        <td><input type="submit" value="Add pensionplan" [disabled]="!addForm.valid"></td>
+    </tr>
+</table></form>
+

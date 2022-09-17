@@ -1,0 +1,19 @@
+<div>
+<app-search></app-search>
+</div>
+
+<div>
+    <ol [ngStyle]="{'list-style-type':'none'}">
+        <li *ngFor ="let pensionplan of pensionplanObs$|async">
+            <h4>Name: {{pensionplan.planName}}<br>
+                <!-- Term:{{pensionplan.term}}<br> -->
+                Premium:{{pensionplan.premium}}<br>
+                <!-- Amount:{{pensionplan.amount}}<br> -->
+                Coverage:{{pensionplan.coverage}}<br>
+                <!-- Age:{{pensionplan.age}}<br> -->
+                <button (click)="show(pensionplan.planId)">Show Details</button>
+            </h4>
+
+        </li>
+    </ol>
+</div>

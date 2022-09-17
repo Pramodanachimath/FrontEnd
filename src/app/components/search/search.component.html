@@ -1,0 +1,26 @@
+<table>
+<div [ngStyle]="{'text-align':'center'}">
+    <h1>Filter</h1>
+   
+        <tr>
+            <td><label for="propertyName">Enter propertyName</label></td>
+            <td>
+                <select #propertyName>
+                    <option value="coverage">Coverage</option>
+                    <option value="premium">Premium</option> 
+                    <!-- <option value="risk">Risk</option> -->
+                </select><br>
+            </td>
+        </tr>
+        <tr>
+            <td> <label for="choice">Enter Choice</label></td>
+            <td><input type="text" #choice></td>
+        </tr>
+        <tr>
+            <td> <button (click)="show(propertyName.value,choice.value)">Show Plans</button></td>
+        </tr>
+    
+
+    </div>
+  </table>  
+    
